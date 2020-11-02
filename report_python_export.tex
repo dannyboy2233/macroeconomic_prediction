@@ -1,0 +1,148 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{tcolorbox}  % for colored boxes
+\usepackage{xcolor}  % to properly define colors 
+\usepackage{titling}  % to help with title spacing
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{longtable}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+\definecolor{framecolor}{RGB}{255, 255, 255}  % Rule colour
+\definecolor{fillcolor0}{RGB}{255,127.5,127.5}
+\definecolor{fillcolor1}{RGB}{255,127.5,127.5}
+\definecolor{fillcolor2}{RGB}{255,163.59267305957067,127.5}
+
+\makeatletter
+\newcommand{\mybox}[2]{
+ 	\setbox0=\hbox{#1}
+ 	\setlength{\@tempdima}{\dimexpr\wd0+13pt}
+ 		\begin{tcolorbox}[colframe=framecolor,colback={#2}, boxrule=0.5pt,arc=4pt, left=6pt,right=6pt,top=6pt,bottom=6pt,boxsep=0pt,width=\@tempdima]
+   		#1
+ 		\end{tcolorbox}
+}
+\makeatother
+
+\setlength{\droptitle}{-10em}   % This is your set screw
+\title{US Recession Forecast: \today}
+\author{Danny Cohen, Corporate Intelligence Analyst Intern}
+\date{}
+
+ \begin{document}
+
+	\maketitle
+
+	\section{Recession Probabilities} 
+		
+		\subsection{Three-month Predictions}
+
+			\begin{tabular*}{\textwidth}{c @{\extracolsep{\fill}} ccccc}
+				\\
+				\textit{December  2019} & &\textit{January  2020} & & \textit{February  2020} \\ 
+				\\
+				\mybox{\huge{22.64\%}}{fillcolor0} & $\Longrightarrow$ & \mybox{\huge{24.56\%}}{fillcolor1} &
+					 $\Longrightarrow$ & \mybox{\huge{25.38\%}}{fillcolor2} \\
+				$\uparrow$ 20.38 & & $\uparrow$ 22.26 & & $\uparrow$ 0 \\
+			\end{tabular*}
+
+		\subsection{Interpreting the Data}
+
+			Do not treat these numbers as mere raw percentages. Based on previous analysis, values above 5\% indicate an elevated risk of recession; values above 10\% indicate a significant risk of recession; and values above 20\% indicate near-certainty of recession. \\ \\
+			The algorithm is designed to underestimate recession risk, meaning high recession probabilities should not be taken lightly.  \\ \\ 
+			\textit{Disclaimer}: these algorithms were trained exclusively on past recessions. Most downturns share macroeconomic characteristics, which makes prediction a reasonable task. However, any future recession would likely go unnoticed if its causes were novel and previously unseen, at which point prediction would be akin to gambling. 
+
+	\pagebreak
+
+	\section{Independent Variables \& Sources}
+		\begin{longtable}{p{.40\textwidth} p{.60\textwidth}}
+			\hline
+			\thead{\textit{Key}} & \thead{\textit{Source}} \\
+			\hline
+			M1 & http://www.federalreserve.gov/releases/h6/\\
+DTWEXBGS & http://www.federalreserve.gov/releases/h10/\\
+UMCSENT & http://www.sca.isr.umich.edu/\\
+PERMIT & http://www.census.gov/construction/nrc/\\
+ASPUS & http://www.census.gov/construction/nrs/\\
+HSN1F & http://www.census.gov/construction/nrs/\\
+AWHAEMAN & http://www.bls.gov/ces/\\
+TCU & http://www.federalreserve.gov/releases/g17/\\
+RSXFS & http://www.census.gov/retail/\\
+CPIAUCSL & http://www.bls.gov/cpi/\\
+CPALTT01USM657N & http://www.oecd-ilibrary.org/economics/data/main-economic-indicators/main-economic-indicators-complete-database\_data-00052-en\\
+DTWEXB & http://www.federalreserve.gov/releases/h10/\\
+NASDAQCOM & http://www.nasdaq.com/\\
+BOGZ1LM155035015A & http://www.federalreserve.gov/releases/z1/\\
+AMTMNO & http://www.census.gov/indicator/www/m3/\\
+MANEMP & http://www.bls.gov/ces/\\
+INDPRO & http://www.federalreserve.gov/releases/g17/\\
+DJIA & http://www.djaverages.com/\\
+AWHMAN & http://www.bls.gov/ces/\\
+NEWORDER & http://www.census.gov/indicator/www/m3/\\
+IPMAN & http://www.federalreserve.gov/releases/g17/\\
+A36SNO & http://www.census.gov/indicator/www/m3/\\
+MCUMFN & http://www.federalreserve.gov/releases/g17/\\
+TOTBUSMPCIMSA & http://www.census.gov/mtis/www/mtis.html\\
+M2 & http://www.federalreserve.gov/releases/h6/\\
+MSPUS & http://www.census.gov/construction/nrs/\\
+ESALEUSQ176N & http://www.census.gov/housing/hvs/\\
+ACDGNO & http://www.census.gov/indicator/www/m3/\\
+IPDCONGD & http://www.federalreserve.gov/releases/g17/\\
+AMDMUO & http://www.census.gov/indicator/www/m3/\\
+AMTMUO & http://www.census.gov/indicator/www/m3/\\
+BUSINV & http://www.census.gov/mtis/www/mtis.html\\
+T10YFF & \\
+CPROFIT & https://www.bea.gov/data/gdp/gross-domestic-product\\
+ICSA & http://www.dol.gov/ui/data.pdf\\
+DTWEXM & http://www.federalreserve.gov/releases/h10/\\
+CSCICP03USM665S & http://www.oecd-ilibrary.org/economics/data/main-economic-indicators/main-economic-indicators-complete-database\_data-00052-en\\
+HOUST & http://www.census.gov/construction/nrc/\\
+DGORDER & http://www.census.gov/indicator/www/m3/\\
+AMDMUS & http://www.census.gov/indicator/www/m3/\\
+ACOGNO & http://www.census.gov/indicator/www/m3/\\
+TOTALSA & https://www.bea.gov/national/xls/gap\_hist.xlsx\\
+ECOMSA & http://www.census.gov/mrts/www/ecomm.html\\
+UNRATE & http://www.bls.gov/ces/\\
+IC4WSA & http://www.dol.gov/ui/data.pdf\\
+SP500 & https://us.spindices.com/indices/equity/sp-500\\
+MICH & http://www.sca.isr.umich.edu/\\
+BSCICP03USM665S & http://www.oecd-ilibrary.org/economics/data/main-economic-indicators/main-economic-indicators-complete-database\_data-00052-en\\
+ETOTALUSQ176N & http://www.census.gov/housing/hvs/\\
+LCEAMN01USM659S & http://www.oecd-ilibrary.org/economics/data/main-economic-indicators/main-economic-indicators-complete-database\_data-00052-en\\
+PCDG & https://www.bea.gov/data/gdp/gross-domestic-product\\
+MARTSMPCSM44000USS & http://www.census.gov/retail/\\
+RETAILMPCSMSA & http://www.census.gov/mtis/www/mtis.html\\
+CPALTT01USQ657N & http://www.oecd-ilibrary.org/economics/data/main-economic-indicators/main-economic-indicators-complete-database\_data-00052-en\\
+			\hline
+		\caption{Independent variables keys and their associated sources.}
+		\label{tab:myfirstlongtable}
+		\end{longtable}
+
+	\pagebreak
+
+	\section{Process}
+		\begin{enumerate}
+			\item Retrieve data for each of the 58 independent variables from FRED server.
+			\item Clean, interpolate, and aggregate these data.
+			\item Retrieve dependent variables from FRED, and offset by desired number of months.
+			\item Combine independent and dependent variables and merge with VMware internal data.
+			\item Upload tables to \textit{sse\_ccmi} schema in PostgreSQL data warehouse: 
+				\begin{itemize}
+					\item \textit{dc\_model\_aggregate}: independent variables
+					\item \textit{dc\_model\_merged}: independent and dependent variables
+					\item \textit{dc\_model\_sources}: independent variables and their sources
+					\item \textit{dc\_model\_vmware\_sales\_2010\_onward}: VMware sales 2010-present
+					\item \textit{dc\_model\_fred\_vmware\_combined}: independent and dependent variables, VMware sales data
+					\item \textit{dc\_model\_complete}: independent and dependent variables, VMware sales data, dependent-variable 
+						predictions
+				\end{itemize}
+			\item Read data into Python's TensorFlow machine learning framework.
+			\item Divide dataset into five segments, one for each recession in the past 48 years.
+			\item For each segment: train three new boosted regression tree algorithms on the other four segments and pick the most accurate iteration.
+			\item Use five algorithms (best one from each segment) to predict state of macroeconomy.
+			\item Export report as PDF.
+		\end{enumerate}
+
+ \end{document}
